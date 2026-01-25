@@ -1,13 +1,34 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./output.css" rel="stylesheet">
+    </head>
+
+    <!-- Header -->
+    <header class="flex items-center justify-between px-6 py-4 bg-slate-900 text-white">
+        <h1 class="text-xl font-semibold">Luppitt Inn</h1>
+        <nav class="flex space-x-6">
+            <a href="#" class="hover:text-slate-300 transtiion">Home</a>
+            <a href="#" class="hover:text-slate-300 transtiion">About</a>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div class="glass-wrapper top-40 left-10 scale-100 slide-in-left"
+        data-animate="slide-in">
+            <div class="glass-box max-w-lg p-6">
+                <div class="glass-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam semper augue, eu pretium urna laoreet molestie. Donec eget mattis mauris. 
+                    Morbi venenatis molestie sapien id porttitor. Fusce ac viverra nisi. Cras rhoncus nisl diam, et iaculis nunc lobortis nec. Aliquam at tempor mi, at fringilla velit. 
+                    Etiam at est iaculis, efficitur tortor vel, luctus nisi. Nulla aliquam mattis sodales. Nullam tincidunt aliquet augue non fringilla. Nulla quis luctus nulla, a vulputate sapien. 
+                    Etiam vitae viverra nulla. Suspendisse ex ante, aliquam et massa at, egestas ullamcorper velit.</p>
+                </div>
+            </div>
+        </div>  
+
+        <script src="main.js" defer></script>
+    </body>
 </html>

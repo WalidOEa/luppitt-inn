@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@layer components {
+    /* Glass box */
+    /* Positioning wrapper */
+    .glass-wrapper {
+        @apply absolute z-10;
+    }
+
+    /* Core glass box component */
+    .glass-box {
+        @apply
+            text-white
+            backdrop-blur-sm
+            bg-white/10
+            border border-white/20
+            rounded-sm
+            shadow-sm;
+    }
+
+    /* Inner content */
+    .glass-content {
+        @apply text-base drop-shadow-[0.1rem_0.1rem_2px_black];
+    }
+
+    /* Animation */
+    .slide-in-left {
+        @apply
+            opacity-0
+            -translate-x-16
+            transition-all
+            duration-700
+            ease-out;
+    }
+
+    .slide-in-left.is-visible {
+        @apply
+            opacity-100
+            translate-x-0;
+    }
+}
