@@ -65,11 +65,69 @@
             </div>
         </section> 
 
-        <!-- Events & Contact -->
-        <section class="relative w-full min-h-screen overflow-hidden">
+        <!-- Events -->
+        <section class="relative w-full h-screen overflow-hidden">
+            <!-- Background image -->
+            <div class="bg-image-container slide-in-right"
+            data-animate="slide-in-right">
+                <img src="/assets/images/pub-inside-2.jpeg" alt="Events background" class="bg-image">
+            </div>
 
+            <!-- Glass box -->
+            <div class="glass-wrapper top-40 left-10 slide-in-left" 
+            data-animate="slide-in-left">
+                <div class="glass-box max-w-lg p-6">
+                    <div class="glass-content">
+                        <h2 class="text-2xl font-semibold mb-4">Events</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam semper augue, eu pretium urna laoreet molestie. Donec eget mattis mauris. 
+                        Morbi venenatis molestie sapien id porttitor. Fusce ac viverra nisi. Cras rhoncus nisl diam, et iaculis nunc lobortis nec. Aliquam at tempor mi, at fringilla velit. 
+                        Etiam at est iaculis, efficitur tortor vel, luctus nisi. Nulla aliquam mattis sodales. Nullam tincidunt aliquet augue non fringilla. Nulla quis luctus nulla, a vulputate sapien. 
+                        Etiam vitae viverra nulla. Suspendisse ex ante, aliquam et massa at, egestas ullamcorper velit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facebook Feed -->
+            <div class="absolute top-24 right-10 slide-in-left" 
+            data-animate="slide-in-left">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                width="340" 
+                height="500" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+            </div>
         </section>
+
         <!-- Script -->
         <script src="main.js" defer></script>
     </body>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-900 text-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex flex-col text-sm text-center md:text-left">
+                <p>&copy; <span id="current-year"></span> Luppitt Inn. All rights reserved.</p>
+            </div>
+            <a href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block">
+                <img
+                    src="/assets/ico/icons8-facebook-logo.svg"
+                    alt="Facebook"
+                    class="w-10 h-10 transition-transform duration-200 hover:scale-125"
+                />
+            </a>
+        </div>
+    </footer>
+
+    <!-- Inject current year to footer -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </html>
