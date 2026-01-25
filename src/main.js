@@ -1,4 +1,4 @@
-const animatedElements = document.querySelectorAll('[data-animate="slide-in"]');
+const animatedElements = document.querySelectorAll('[data-animate]');
 
 const observer = new IntersectionObserver(
     (entries) => {

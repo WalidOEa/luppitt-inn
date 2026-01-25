@@ -7,28 +7,38 @@
     </head>
 
     <!-- Header -->
-    <header class="flex items-center justify-between px-6 py-4 bg-slate-900 text-white">
-        <h1 class="text-xl font-semibold">Luppitt Inn</h1>
-        <nav class="flex space-x-6">
+    <header class="fixed bg-emerald-900 text-gray-200 top-0 left-0 w-full h-16 z-50 shadow-xl flex items-center justify-between px-6">
+        <h1 class="text-xl font-semibold text-white">The Luppitt Inn</h1>
+        <nav class="flex space-x-6 text-white">
             <a href="#" class="hover:text-slate-300 transtiion">Home</a>
             <a href="#" class="hover:text-slate-300 transtiion">About</a>
         </nav>
     </header>
 
     <!-- Body -->
-    <body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div class="glass-wrapper top-40 left-10 scale-100 slide-in-left"
-        data-animate="slide-in">
-            <div class="glass-box max-w-lg p-6">
-                <div class="glass-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam semper augue, eu pretium urna laoreet molestie. Donec eget mattis mauris. 
-                    Morbi venenatis molestie sapien id porttitor. Fusce ac viverra nisi. Cras rhoncus nisl diam, et iaculis nunc lobortis nec. Aliquam at tempor mi, at fringilla velit. 
-                    Etiam at est iaculis, efficitur tortor vel, luctus nisi. Nulla aliquam mattis sodales. Nullam tincidunt aliquet augue non fringilla. Nulla quis luctus nulla, a vulputate sapien. 
-                    Etiam vitae viverra nulla. Suspendisse ex ante, aliquam et massa at, egestas ullamcorper velit.</p>
-                </div>
+    <body class="min-h-screen">
+        <!-- Home -->
+        <section class="relative w-full h-screen overflow-hidden">
+            <!-- Background image -->
+            <div class="bg-image-container slide-in-right" data-animate="slide-in-right">
+                <img src="/assets/images/pub-outside.jpg" alt="Home background" class="bg-image">
             </div>
-        </div>  
 
+            <!-- Glass box -->
+            <div class="glass-wrapper top-40 left-10 slide-in-left"
+            data-animate="slide-in">
+                <div class="glass-box max-w-lg p-6">
+                    <div class="glass-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam semper augue, eu pretium urna laoreet molestie. Donec eget mattis mauris. 
+                        Morbi venenatis molestie sapien id porttitor. Fusce ac viverra nisi. Cras rhoncus nisl diam, et iaculis nunc lobortis nec. Aliquam at tempor mi, at fringilla velit. 
+                        Etiam at est iaculis, efficitur tortor vel, luctus nisi. Nulla aliquam mattis sodales. Nullam tincidunt aliquet augue non fringilla. Nulla quis luctus nulla, a vulputate sapien. 
+                        Etiam vitae viverra nulla. Suspendisse ex ante, aliquam et massa at, egestas ullamcorper velit.</p>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <!-- Script -->
         <script src="main.js" defer></script>
     </body>
 </html>

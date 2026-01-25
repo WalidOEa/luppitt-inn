@@ -24,6 +24,7 @@
     }
 
     /* Animation */
+    /* Left slide animation */
     .slide-in-left {
         @apply
             opacity-0
@@ -37,5 +38,41 @@
         @apply
             opacity-100
             translate-x-0;
+    }
+
+    /* Right side animation */
+    .slide-in-right {
+        @apply 
+            opacity-0 
+            translate-x-16 
+            transition-all 
+            duration-700 
+            ease-out;
+    }
+
+    .slide-in-right.is-visible {
+        @apply 
+            opacity-100 
+            translate-x-0;
+    }
+
+    /* Background image container */
+    .bg-image-container {
+        @apply
+            absolute
+            inset-0
+            w-full
+            h-full
+            overflow-hidden
+            z-0;    
+    }
+
+    .bg-image {
+        @apply
+            absolute
+            inset-0
+            w-full
+            h-full
+            object-cover;
     }
 }
