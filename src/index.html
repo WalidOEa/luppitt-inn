@@ -6,19 +6,20 @@
         <link href="./output.css" rel="stylesheet">
     </head>
 
-    <!-- Header -->
-    <header class="fixed bg-emerald-900 text-gray-200 top-0 left-0 w-full h-16 z-50 shadow-xl flex items-center justify-between px-6">
-        <h1 class="text-xl font-semibold text-white">The Luppitt Inn</h1>
-        <nav class="flex space-x-6 text-white">
-            <a href="#" class="hover:text-slate-300 transtiion">Home</a>
-            <a href="#" class="hover:text-slate-300 transtiion">About</a>
-        </nav>
-    </header>
-
     <!-- Body -->
     <body class="min-h-screen">
+        <!-- Header -->
+        <header class="fixed bg-emerald-900 text-gray-200 top-0 left-0 w-full h-16 z-50 shadow-xl flex items-center justify-between px-6">
+            <h1 class="text-xl font-semibold text-white">The Luppitt Inn</h1>
+            <nav class="flex space-x-6 text-white">
+                <a href="#home" class="nav-link hover:text-gray-100 transition">Home</a>
+                <a href="#about" class="nav-link hover:text-gray-100 transition">About</a>
+                <a href="#events" class="nav-link hover:text-gray-100 transition">Events</a>
+            </nav>
+        </header>
+
         <!-- Home -->
-        <section class="relative w-full h-screen overflow-hidden">
+        <section id="home" class="relative w-full h-screen overflow-hidden">
             <!-- Background image -->
             <div class="bg-image-container slide-in-right" 
             data-animate="slide-in-right">
@@ -42,7 +43,7 @@
         </section>
 
         <!-- About -->
-        <section class="relative w-full min-h-screen overflow-hidden">
+        <section id="about" class="relative w-full min-h-screen overflow-hidden">
             <!-- Background image -->
             <div class="bg-image-container slide-in-left" 
             data-animate="slide-in-left">
@@ -66,7 +67,7 @@
         </section> 
 
         <!-- Events -->
-        <section class="relative w-full h-screen overflow-hidden">
+        <section id="events" class="relative w-full h-screen overflow-hidden">
             <!-- Background image -->
             <div class="bg-image-container slide-in-right"
             data-animate="slide-in-right">
@@ -103,28 +104,28 @@
             </div>
         </section>
 
+        <!-- Footer -->
+        <footer class="bg-emerald-900 text-gray-200 py-6">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
+                <div class="flex flex-col text-sm text-center md:text-left">
+                    <p>&copy; <span id="current-year"></span> Luppitt Inn. All rights reserved.</p>
+                </div>
+                <a href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block">
+                    <img
+                        src="/assets/ico/icons8-facebook-logo.svg"
+                        alt="Facebook"
+                        class="w-10 h-10 transition-transform duration-200 hover:scale-125"
+                    />
+                </a>
+            </div>
+        </footer>
+
         <!-- Script -->
         <script src="main.js" defer></script>
     </body>
-
-    <!-- Footer -->
-    <footer class="bg-emerald-900 text-gray-200 py-6">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
-            <div class="flex flex-col text-sm text-center md:text-left">
-                <p>&copy; <span id="current-year"></span> Luppitt Inn. All rights reserved.</p>
-            </div>
-            <a href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block">
-                <img
-                    src="/assets/ico/icons8-facebook-logo.svg"
-                    alt="Facebook"
-                    class="w-10 h-10 transition-transform duration-200 hover:scale-125"
-                />
-            </a>
-        </div>
-    </footer>
 
     <!-- Inject current year to footer -->
     <script>
