@@ -20,11 +20,20 @@
 
         <!-- Home -->
         <section id="home" class="relative w-full h-screen overflow-hidden">
-            <!-- Background image -->
-            <div class="bg-image-container slide-in-right" 
-            data-animate="slide-in-right">
-                <img src="./assets/images/pub-outside.jpg" alt="Home background" class="bg-image">
+            <!-- Background image carousel -->
+            <div class="bg-image-container">
+                <div class="bg-carousel">
+                    <div class="bg-track">
+                        <img src="./assets/images/pub-outside.jpg" class="bg-slide" />
+                        <img src="./assets/images/pub-inside-1.jpg" class="bg-slide" />
+                        <img src="./assets/images/pub-outside.jpg" class="bg-slide" />
+                    </div>
+                </div>
             </div>
+            
+            <!-- Pointer buttons -->
+            <button class="carousel-btn left" data-dir="-1">❮</button>
+            <button class="carousel-btn right" data-dir="1">❯</button>
 
             <!-- Glass box -->
             <div class="glass-wrapper top-40 left-10 slide-in-left"
@@ -72,11 +81,11 @@
                     </div>
                     <div class="hours-row flex justify-between">
                         <span class="font-medium">Saturday</span>
-                        <span>19:30-23:00</span>
+                        <span>Closed</span>
                     </div>
                     <div class="hours-row flex justify-between">
                         <span class="font-medium">Sunday</span>
-                        <span>19:30-23:00</span>
+                        <span>Closed</span>
                     </div>
                 </div>
             </div>

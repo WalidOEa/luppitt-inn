@@ -75,6 +75,63 @@
             object-cover;
     }
 
+    /* Background image carousel */
+    .bg-carousel {
+        @apply
+            absolute
+            inset-0
+            overflow-hidden
+            z-0;
+    }
+
+    .bg-track {
+        @apply
+            flex
+            h-full
+            transition-transform
+            duration-500
+            ease-out;
+    }
+
+    .bg-slide {
+        @apply
+            height: 100%
+            object-cover
+            flex-shrink-0
+            width: 100vw;
+    }
+
+    /* Carousel buttons */
+    .carousel-btn {
+        @apply 
+            absolute 
+            top-1/2 
+            -translate-y-1/2
+            text-white/60 
+            hover:text-white
+            bg-black/30 
+            hover:bg-black/50
+            backdrop-blur-sm
+            w-10 
+            h-10 
+            rounded-full
+            flex items-center 
+            justify-center
+            cursor-pointer 
+            z-30
+            transition;
+    }
+
+    .carousel-btn.left {
+        @apply 
+            left-4;
+    }
+
+    .carousel-btn.right {
+        @apply 
+            right-4;
+    }
+
     /* Divider */
     .section-divider {
         @apply
