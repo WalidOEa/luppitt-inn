@@ -388,9 +388,6 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
-  .py-10 {
-    padding-block: calc(var(--spacing) * 10);
-  }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
@@ -680,6 +677,23 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+  }
+  @supports (font-variation-settings: normal) {
+    html {
+      font-family: 'InterVariable', sans-serif;
+    }
+  }
+  h1 {
+    font-family: "Texturina", serif;
+    font-weight: 700;
+    font-optical-sizing: auto;
+  }
+  h2 {
+    font-family: "Texturina", serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
   }
 }
 @property --tw-rotate-x {
