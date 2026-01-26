@@ -106,11 +106,21 @@
 
         <!-- About -->
         <section id="about" class="relative w-full h-screen overflow-hidden scroll-mt-20">
-            <!-- Background image -->
-            <div class="bg-image-container slide-in-left" 
-            data-animate="slide-in-left">
-                <img src="./assets/images/inn-sign-1.jpg" class="bg-slide" />
+            <!-- Background image carousel -->
+            <div class="bg-image-container">
+                <div class="bg-carousel">
+                    <div class="bg-track">
+                        <img src="./assets/images/inn-sign-1.jpg" class="bg-slide" />
+                        <img src="./assets/images/inn-interior-4.jpeg" class="bg-slide" />
+                        <img src="./assets/images/inn-interior-5.jpeg" class="bg-slide" />
+                        <img src="./assets/images/inn-interior-6.jpeg" class="bg-slide" />
+                    </div>
+                </div>
             </div>
+            
+            <!-- Pointer buttons -->
+            <button class="carousel-btn left" data-dir="-1">❮</button>
+            <button class="carousel-btn right" data-dir="1">❯</button>
 
             <!-- Glass box -->
             <div class="glass-wrapper top-40 right-10 slide-in-right" 
@@ -172,7 +182,7 @@
             <!-- Background image -->
             <div class="bg-image-container slide-in-right"
             data-animate="slide-in-right">
-                <img src="./assets/images/inn-interior-3.jpg" alt="Events background" class="bg-image">
+                <img src="./assets/images/inn-outside-2.jpg" alt="Events background" class="bg-image">
             </div>
 
             <div class="absolute top-24 right-10 bg-black/40 backdrop-blur-sm p-6 rounded-sm shadow-xl flex gap-6 z-20"
