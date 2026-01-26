@@ -11,10 +11,10 @@
         @apply
             text-white
             backdrop-blur-sm
-            bg-white/10
-            border border-white/20
+            bg-emerald-900/50
+            border border-emerald-200/30
             rounded-sm
-            shadow-sm;
+            shadow-lg;
     }
 
     /* Inner content */
@@ -95,10 +95,10 @@
 
     .bg-slide {
         @apply
-            height: 100%
+            h-full
+            w-screen
             object-cover
-            flex-shrink-0
-            width: 100vw;
+            flex-shrink-0;
     }
 
     /* Carousel buttons */
