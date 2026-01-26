@@ -29,3 +29,32 @@ const navObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.5 });
 sections.forEach(section => navObserver.observe(section));
+
+// Current day highlighting
+const dayNames = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+];
+  
+const today = dayNames[new Date().getDay()];
+const rows = document.querySelectorAll(".hours-row");
+  
+rows.forEach((row) => {
+    const dayText = row.querySelector("span").textContent.trim();
+  
+    if (dayText === today) {
+        row.classList.add(
+            "text-red-900",
+            "font-semibold",
+            "bg-red-50",
+            "px-3",
+            "py-1",
+            "rounded-md"
+        );
+    }
+});  

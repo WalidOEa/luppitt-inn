@@ -9,7 +9,7 @@
     <!-- Body -->
     <body class="min-h-screen">
         <!-- Header -->
-        <header class="fixed bg-emerald-900 text-gray-200 top-0 left-0 w-full h-16 z-50 shadow-xl flex items-center justify-between px-6">
+        <header class="fixed bg-red-900 text-gray-200 top-0 left-0 w-full h-16 z-50 shadow-xl flex items-center justify-between px-6">
             <h1 class="text-xl font-semibold text-white">The Luppitt Inn</h1>
             <nav class="flex space-x-6 text-white">
                 <a href="#home" class="nav-link hover:text-gray-100 transition">Home</a>
@@ -42,6 +42,49 @@
             </div>  
         </section>
 
+        <div class="section-divider"></div>
+
+        <!-- Opening hours -->
+        <div class="border-t border-gray-200 mt-8 mb-8"></div>
+        <section id="hours" class="relative w-full bg-white py-12 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Opening Hours</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg text-gray-700">
+                    <div class="hours-row flex justify-between">
+                        <span class="font-medium">Monday</span>
+                        <span>19:30-23:00</span>
+                    </div>
+                    <div class="hours-row flex justify-between">
+                        <span class="font-medium">Tuesday</span>
+                        <span>Closed</span>
+                    </div>
+                    <div class="hours-row flex justify-between">
+                        <span class="font-medium">Wednesday</span>
+                        <span>19:30-23:00</span>
+                    </div>
+                    <div class="hours-row flex justify-between">
+                        <span class="font-medium">Thursday</span>
+                        <span>Closed</span>
+                    </div>
+                    <div class="hours-row flex justify-between">
+                        <span class="font-medium">Friday</span>
+                        <span>18:00-23:00</span>
+                    </div>
+                    <div class="hours-row flex justify-between">
+                        <span class="font-medium">Saturday</span>
+                        <span>19:30-23:00</span>
+                    </div>
+                    <div class="hours-row flex justify-between">
+                        <span class="font-medium">Sunday</span>
+                        <span>19:30-23:00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="border-t border-gray-200 mt-8 mb-8"></div>
+
+        <div class="section-divider"></div>
+
         <!-- About -->
         <section id="about" class="relative w-full min-h-screen overflow-hidden">
             <!-- Background image -->
@@ -65,6 +108,8 @@
                 </div>
             </div>
         </section> 
+
+        <div class="section-divider"></div>
 
         <!-- Events -->
         <section id="events" class="relative w-full h-screen overflow-hidden">
@@ -105,7 +150,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-emerald-900 text-gray-200 py-6">
+        <footer class="bg-red-900 text-gray-200 py-6">
             <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
                 <div class="flex flex-col text-sm text-center md:text-left">
                     <p>&copy; <span id="current-year"></span> Luppitt Inn. All rights reserved.</p>

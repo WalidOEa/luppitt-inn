@@ -74,6 +74,17 @@
             h-full
             object-cover;
     }
+
+    /* Divider */
+    .section-divider {
+        @apply
+            w-full
+            h-16
+            bg-red-900
+            shadow-xl
+            relative
+            z-40;
+    }
 }
 @layer base {
     html {
