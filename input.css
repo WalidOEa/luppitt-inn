@@ -100,6 +100,15 @@
             object-cover
             flex-shrink-0;
     }
+    
+    .hero-fade {
+        opacity: 0;
+        transition: opacity 700ms ease-out;
+    }
+    
+    .hero-fade.is-visible {
+        opacity: 1;
+    }
 
     /* Carousel buttons */
     .carousel-btn {
