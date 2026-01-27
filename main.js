@@ -51,7 +51,7 @@ rows.forEach((row) => {
         row.classList.add(
             "text-red-900",
             "font-semibold",
-            "bg-red-50",
+            "bg-red-100",
             "px-3",
             "py-1",
             "rounded-md"

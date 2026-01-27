@@ -8,8 +8,12 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-50: oklch(97.1% 0.013 17.38);
+    --color-red-100: oklch(93.6% 0.032 17.717);
     --color-red-900: oklch(39.6% 0.141 25.723);
+    --color-yellow-50: oklch(98.7% 0.026 102.212);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
+    --color-yellow-500: oklch(79.5% 0.184 86.047);
+    --color-yellow-800: oklch(47.6% 0.114 61.907);
     --color-emerald-200: oklch(90.5% 0.093 164.15);
     --color-emerald-900: oklch(37.8% 0.077 168.94);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -361,8 +365,8 @@
       background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
     }
   }
-  .bg-red-50 {
-    background-color: var(--color-red-50);
+  .bg-red-100 {
+    background-color: var(--color-red-100);
   }
   .bg-red-900 {
     background-color: var(--color-red-900);
