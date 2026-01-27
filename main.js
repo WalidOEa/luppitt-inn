@@ -10,7 +10,7 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.5,
+        threshold: 0.1,
     }
 );
 animatedElements.forEach(el => observer.observe(el));
