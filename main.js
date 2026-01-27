@@ -118,3 +118,22 @@ document.querySelectorAll(".bg-carousel").forEach((carousel) => {
         jumpWithoutAnimation();
     });
 });
+
+// Centre viewport on contact and opening hours
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+
+        const targetRect = target.getBoundingClientRect();
+        const scrollTop = window.scrollY || window.pageYOffset;
+
+        const targetCenter = scrollTop + targetRect.top - (window.innerHeight / 2) + (targetRect.height / 2);
+
+        window.scrollTo({
+            top: targetCenter,
+            behavior: 'smooth'
+        });
+    });
+});
