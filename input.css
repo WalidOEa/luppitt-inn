@@ -17,6 +17,19 @@
         header h1 {
             @apply mb-2;
         }
+
+        /* Glass boxes */
+        .glass-wrapper {
+            position: relative !important;
+            top: auto !important;
+            right: auto !important;
+            margin: 1rem auto !important;
+            z-index: 10 !important;
+        }
+    
+        .glass-box {
+            max-width: 100% !important; 
+        }
     }
     
 

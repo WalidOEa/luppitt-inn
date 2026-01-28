@@ -514,6 +514,16 @@
     header h1 {
       margin-bottom: calc(var(--spacing) * 2);
     }
+    .glass-wrapper {
+      position: relative !important;
+      top: auto !important;
+      right: auto !important;
+      margin: 1rem auto !important;
+      z-index: 10 !important;
+    }
+    .glass-box {
+      max-width: 100% !important;
+    }
   }
   .glass-wrapper {
     position: absolute;
