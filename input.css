@@ -1,5 +1,25 @@
 @import "tailwindcss";
 @layer components {
+    /*  Mobile */
+    @media (max-width: 767px) {
+        /* Header */
+        header { /* Ugly */
+            height: auto !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1rem;
+        }
+        header nav {
+            @apply flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm;
+        }
+    
+        header h1 {
+            @apply mb-2;
+        }
+    }
+    
+
     /* Glass box */
     /* Positioning wrapper */
     .glass-wrapper {
