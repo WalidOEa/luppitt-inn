@@ -1,3 +1,29 @@
+// Initialise swiper
+if (window.innerWidth <= 768) {
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true, // infinite loop
+        autoplay: {
+            delay: 5000, 
+            disableOnInteraction: false, // continue autoplay after manual swipe
+        }
+    });
+} else {
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true, // infinite loop
+        autoplay: {
+            delay: 5000, 
+            disableOnInteraction: false, // continue autoplay after manual swipe
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+}
+
+
 // Scroll-triggered animations
 const animatedElements = document.querySelectorAll('[data-animate]');
 const observer = new IntersectionObserver(
@@ -59,87 +85,5 @@ rows.forEach((row) => {
     }
 });
 
-// Background image carousel
-document.querySelectorAll(".bg-carousel").forEach((carousel) => {
-    const track = carousel.querySelector(".bg-track");
-    const slides = Array.from(track.children);
-
-    const firstClone = slides[0].cloneNode(true);
-    const lastClone = slides[slides.length - 1].cloneNode(true);
-
-    firstClone.classList.add("clone");
-    lastClone.classList.add("clone");
-
-    track.appendChild(firstClone);
-    track.insertBefore(lastClone, slides[0]);
-
-    const allSlides = track.children;
-    let index = 1;
-    let isTransitioning = false;
-
-    const slideWidth = window.innerWidth;
-
-    track.style.transition = "none";
-    track.style.transform = `translateX(-${slideWidth * index}px)`;
-
-    requestAnimationFrame(() => {
-        track.style.transition = "transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1)";
-    });
-
-    const moveTo = () => {
-        isTransitioning = true;
-        track.style.transition = "transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1)";
-        track.style.transform = `translateX(-${slideWidth * index}px)`;
-    };
-
-    const jumpWithoutAnimation = () => {
-        track.style.transition = "none";
-        track.style.transform = `translateX(-${slideWidth * index}px)`;
-    };
-
-    carousel.closest("section").querySelectorAll(".carousel-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-            if (isTransitioning) return;
-            index += Number(btn.dataset.dir);
-            moveTo();
-        });
-    });
-
-    track.addEventListener("transitionend", () => {
-        isTransitioning = false;
-
-        if (allSlides[index].classList.contains("clone")) {
-            index = index === 0 ? slides.length : 1;
-            jumpWithoutAnimation();
-        }
-    });
-
-    window.addEventListener("resize", () => {
-        jumpWithoutAnimation();
-    });
-});
-
-// Centre viewport on contact and opening hours
-document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (!target) return;
-
-        // Desktop:
-        if (window.innerWidth >= 768) {
-            const targetRect = target.getBoundingClientRect();
-            const scrollTop = window.scrollY || window.pageYOffset;
-
-            const targetCenter = scrollTop + targetRect.top - (window.innerHeight / 2) + (targetRect.height / 2);
-
-            window.scrollTo({
-                top: targetCenter,
-                behavior: 'smooth'
-            });
-        } else {
-            // Mobile:
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
+// Get current year for footer
+document.getElementById('current-year').textContent = new Date().getFullYear();

@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Swiper CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+        <!-- input.css -->
         <link href="./output.css" rel="stylesheet">
 
         <!-- Fonts -->
@@ -15,48 +21,59 @@
         <link rel="preconnect" href="https://rsms.me/">
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
+        <!-- Icon -->
         <link rel="icon" type="image/jpeg" href="./assets/ico/luppitt-inn-icon.jpg">
     </head>
-
-    <!-- Body -->
-    <body class="min-h-screen">
+    <body>
         <!-- Header -->
-        <header class="fixed bg-red-900 text-gray-200 top-0 left-0 w-full h-16 z-50 shadow-xl flex items-center justify-between px-6">
-            <h1 class="text-xl font-semibold text-white">The Luppitt Inn</h1>
-            <nav class="flex space-x-6 text-white">
-                <a href="#home" class="nav-link hover:text-gray-100 transition">Home</a>
-                <a href="#hours" class="nav-link hover:text-gray-100 transition">Opening Hours</a>
-                <a href="#about" class="nav-link hover:text-gray-100 transition">About</a>
-                <a href="#contact" class="nav-link hover:text-gray-100 transition">Contact</a>
-                <a href="#find-us" class="nav-link hover:text-gray-100 transition">Find Us</a>
+        <header>
+            <h1>The Luppitt Inn</h1>
+            <nav>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#hours" class="nav-link">Opening Hours</a>
+                <a href="#about" class="nav-link">About</a>
+                <div class="flex gap-4">
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#whats-on" class="nav-link">What's On</a>
+                </div> 
             </nav>
         </header>
 
         <!-- Home -->
-        <section id="home" class="relative w-full h-screen overflow-hidden scroll-mt-20">
-            <!-- Background image carousel -->
-            <div class="bg-image-container hero-fade" 
+        <section id="home" class="hero-1">
+            <!-- First swiper -->
+            <div class="swiper hero-fade"
             data-animate="hero-fade">
-                <div class="bg-carousel">
-                    <div class="bg-track">
-                        <img src="./assets/images/inn-outside-1.jpg" class="bg-slide" />
-                        <img src="./assets/images/inn-interior-2.jpg" loading="lazy" class="bg-slide" />
-                        <img src="./assets/images/inn-interior-3.jpg" loading="lazy" class="bg-slide" />
-                        <img src="./assets/images/inn-interior-1.jpg" loading="lazy" class="bg-slide" />
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="./assets/images/inn-outside-1.jpg" alt="Luppitt Inn outside."/>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/inn-interior-3.jpg" alt="Luppitt Inn interior with bar and cat sat on stool next to bar."/>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/inn-interior-2.jpg" alt="Two kegs of Otter ale placed on top of bar."/>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/inn-interior-1.jpg" alt="Luppitt residents inside Luppitt Inn."/>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                     </div>
                 </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            
-            <!-- Pointer buttons -->
-            <button class="carousel-btn left" data-dir="-1">❮</button>
-            <button class="carousel-btn right" data-dir="1">❯</button>
 
             <!-- Glass box -->
-            <div class="glass-wrapper top-40 right-10 slide-in-left"
+            <div class="glass-wrapper slide-in-left"
             data-animate="slide-in-left">
-                <div class="glass-box max-w-lg p-6">
+                <div class="glass-box">
                     <div class="glass-content">
-                        <h2 class="text-2xl font-semibold mb-4">Welcome</h2>
+                        <h2 class="h2-glass-box">Welcome</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam semper augue, eu pretium urna laoreet molestie. Donec eget mattis mauris. 
                         Morbi venenatis molestie sapien id porttitor. Fusce ac viverra nisi. Cras rhoncus nisl diam, et iaculis nunc lobortis nec. Aliquam at tempor mi, at fringilla velit. 
                         Etiam at est iaculis, efficitur tortor vel, luctus nisi. Nulla aliquam mattis sodales. Nullam tincidunt aliquet augue non fringilla. Nulla quis luctus nulla, a vulputate sapien. 
@@ -64,48 +81,47 @@
                         </p>
                     </div>
                 </div>
-            </div>  
+            </div> 
         </section>
 
         <div class="section-divider"></div>
 
         <!-- Opening hours -->
-        <div class="border-t border-gray-200 mt-8 mb-8"></div>
-        
-        <section id="hours" class="relative w-full bg-white py-12 px-6 scroll-mt-20">
+        <div class="line-separator"></div>
+        <section id="hours" class="hero-2">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">Opening Hours</h2>
+                <h2 class="h2-hero">Opening Hours</h2>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-lg text-gray-700">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 text-lg text-gray-700">
                     <div class="space-y-4">
-                        <div class="hours-row flex justify-between">
+                        <div class="hours-row day-time">
                             <span class="font-medium">Monday</span>
                             <span>19:30–23:00</span>
                         </div>
-                        <div class="hours-row flex justify-between">
+                        <div class="hours-row day-time">
                             <span class="font-medium">Tuesday</span>
                             <span>Closed</span>
                         </div>
-                        <div class="hours-row flex justify-between">
+                        <div class="hours-row day-time">
                             <span class="font-medium">Wednesday</span>
                             <span>19:30–23:00</span>
                         </div>
-                        <div class="hours-row flex justify-between">
+                        <div class="hours-row day-time">
                             <span class="font-medium">Thursday</span>
                             <span>Closed</span>
                         </div>
                     </div>
                     
                     <div class="space-y-4">
-                        <div class="hours-row flex justify-between">
+                        <div class="hours-row day-time">
                             <span class="font-medium">Friday</span>
                             <span>18:00–23:00</span>
                         </div>
-                        <div class="hours-row flex justify-between">
+                        <div class="hours-row day-time">
                             <span class="font-medium">Saturday</span>
                             <span>Closed</span>
                         </div>
-                        <div class="hours-row flex justify-between">
+                        <div class="hours-row day-time">
                             <span class="font-medium">Sunday</span>
                             <span>Closed</span>
                         </div>
@@ -113,35 +129,44 @@
                 </div>
             </div>
         </section>
-        <div class="border-t border-gray-200 mt-8 mb-8"></div>
+        <div class="line-separator"></div>
 
         <div class="section-divider"></div>
 
         <!-- About -->
-        <section id="about" class="relative w-full h-screen overflow-hidden scroll-mt-20">
-            <!-- Background image carousel -->
-            <div class="bg-image-container slide-in-left"
-            data-animate="slide-in-left">
-                <div class="bg-carousel">
-                    <div class="bg-track">
-                        <img src="./assets/images/inn-sign-1.jpg" class="bg-slide" />
-                        <img src="./assets/images/inn-interior-4.jpeg" loading="lazy" class="bg-slide" />
-                        <img src="./assets/images/inn-interior-5.jpeg" loading="lazy" class="bg-slide" />
-                        <img src="./assets/images/inn-interior-6.jpeg" loading="lazy" class="bg-slide" />
+        <section id="about" class="hero-1">
+            <!-- Second swiper -->
+            <div class="swiper slide-in-right"
+            data-animate="slide-in-right">
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="./assets/images/inn-sign-1.jpg" alt="Outside sign posting titled, The Luppitt Inn with its signature logo."/>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/inn-interior-4.jpeg" alt="Bottles and cans of both alcoholic and non-alcoholic beverages alongside glasses placed on a shelf."/>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/inn-interior-5.jpeg" alt="Cozy interior with fireplace at Luppitt Inn."/>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/inn-interior-6.jpeg" alt="Various pub games placed on table."/>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Pointer buttons -->
-            <button class="carousel-btn left" data-dir="-1">❮</button>
-            <button class="carousel-btn right" data-dir="1">❯</button>
 
-            <!-- Glass box -->
-            <div class="glass-wrapper top-40 right-10 slide-in-right" 
-            data-animate="slide-in-right">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="glass-wrapper slide-in-left"
+            data-animate="slide-in-left">
                 <div class="glass-box max-w-lg p-6">
                     <div class="glass-content">
-                        <h2 class="text-2xl font-semibold mb-4">About Us</h2>
+                        <h2 class="h2-glass-box">About Us</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam semper augue, eu pretium urna laoreet molestie. Donec eget mattis mauris. 
                         Morbi venenatis molestie sapien id porttitor. Fusce ac viverra nisi. Cras rhoncus nisl diam, et iaculis nunc lobortis nec. Aliquam at tempor mi, at fringilla velit. 
                         Etiam at est iaculis, efficitur tortor vel, luctus nisi. Nulla aliquam mattis sodales. Nullam tincidunt aliquet augue non fringilla. Nulla quis luctus nulla, a vulputate sapien. 
@@ -149,78 +174,80 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </section> 
+            </div> 
+        </section>
 
         <div class="section-divider"></div>
 
         <!-- Contact -->
-        <div class="border-t border-gray-200 mt-8 mb-8"></div>
-        <section id="contact" class="relative w-full bg-white py-12 px-6 scroll-mt-20">
+        <div class="line-separator"></div>
+        <section id="contact" class="hero-2">
             <div class="max-w-2xl mx-auto text-center text-gray-800">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact</h2>
+                <h2 class="h2-hero">Contact</h2>
 
                 <div class="flex flex-col items-center space-y-3">
                     <!-- Location -->
-                    <p class="text-lg font-medium">
+                    <p class="contact-detail">
                         Luppitt Inn, Luppitt, Honiton EX14 4RT
                     </p>
 
                     <!-- Phone -->
-                    <div class="flex items-center gap-2 text-gray-600 text-sm">
-                        <span class="text-lg font-medium">Telephone 📞</span>
+                    <div class="contact-detail">
+                        <span class="contact-detail-title">Telephone 📞</span>
                         <a href="tel:+447834628454" class="hover:underline">
                             (+44) 07986 707329
                         </a>
                     </div>
 
                     <!-- Email -->
-                    <div class="flex items-center gap-2 text-gray-600 text-sm">
-                        <span class="text-lg font-medium">Email ✉️</span>
+                    <div class="contact-detail">
+                        <span class="contact-detail-title">Email ✉️</span>
                         <a href="mailto:info@luppittinn.co.uk" class="hover:underline">
                             luppitt-smiths@hotmail.co.uk
                         </a>
                     </div>
 
                     <!-- What 3 Words -->
-                    <div class="flex items-center gap-2 text-gray-600 text-sm">
-                        <span class="text-lg font-medium">What3Words 📌</span>
-                        <a href="https://w3w.co/firms.dreading.march" class="hover:underline">
+                    <div class="contact-detail">
+                        <span class="contact-detail-title">What3Words 📌</span>
+                        <a href="https://w3w.co/encoded.hoofs.plodding" class="hover:underline">
                             encoded.hoofs.plodding
                         </a>
                     </div>
                 </div>
+
+                <!-- Google Maps iframe -->
+                <div class="mt-6 w-full">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.821508989385!2d-3.184315487662123!3d50.852989471553634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d8e50f03c0ebf%3A0x853a14ad893d1857!2sLuppitt%20Inn!5e0!3m2!1sen!2suk!4v1769442898291!5m2!1sen!2suk" 
+                        class="w-full h-64 md:h-96 border-0"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </section>
-        <div class="border-t border-gray-200 mt-8 mb-8"></div>
+        <div class="line-separator"></div>
 
         <div class="section-divider"></div>
 
-        <!-- Find us -->
-        <section id="find-us" class="relative w-full h-screen overflow-hidden scroll-mt-20">
+        <!-- Find Us -->
+        <section id="whats-on" class="hero-1">
             <!-- Background image -->
-            <div class="bg-image-container slide-in-right"
+            <div class="slide-in-right bg-image"
             data-animate="slide-in-right">
-                <img src="./assets/images/inn-outside-2.jpg" alt="Events background" class="bg-image">
+                <img src="./assets/images/inn-outside-2.jpg" alt="Luppitt field with lambs and their offspring.">
             </div>
 
-            <div class="glass-wrapper top-24 right-10 slide-in-left"
+            <!-- Iframe -->
+            <div class="glass-wrapper slide-in-left"
             data-animate="slide-in-left">
-                <div class="glass-box p-6">
-                    <div class="glass-content flex flex-col gap-6">
-                        <h2 class="text-2xl font-semibold text-white">Find Us</h2>
+                <div class="glass-box">
+                    <div class="glass-content">
+                        <h2 class="h2-glass-box">What's On</h2>
 
-                        <div class="flex gap-6">
-                            <!-- Google maps -->
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.821508989385!2d-3.184315487662123!3d50.852989471553634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d8e50f03c0ebf%3A0x853a14ad893d1857!2sLuppitt%20Inn!5e0!3m2!1sen!2suk!4v1769442898291!5m2!1sen!2suk" 
-                            width="600" 
-                            height="450" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-
+                        <div class="flex flex-col items-center gap-6">
                             <!-- Facebook Feed -->
                             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FThe-Luppitt-Inn-61571643440443%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
                             width="340" 
@@ -259,9 +286,4 @@
         <!-- Script -->
         <script src="main.js" defer></script>
     </body>
-
-    <!-- Inject current year to footer -->
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </html>
