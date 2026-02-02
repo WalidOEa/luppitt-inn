@@ -619,12 +619,20 @@
       max-height: 70vh;
       max-width: var(--container-lg);
     }
-    .bg-image {
-      position: absolute;
-      inset: calc(var(--spacing) * 0);
+    .img_container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .img_container img {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      object-position: center;
     }
   }
 }
