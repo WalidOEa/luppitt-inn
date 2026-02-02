@@ -636,6 +636,40 @@
     }
   }
 }
+.swiper-button-prev, .swiper-button-next {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(4, 81, 49, 0.5);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(164, 243, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  color: transparent;
+  z-index: 50;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background-color: rgba(4, 81, 49, 0.7);
+  transform: scale(1.05);
+}
+.swiper-button-prev {
+  background-image: url('./assets/ico/icons8-chevron-50-prev.png');
+}
+.swiper-button-next {
+  background-image: url('./assets/ico/icons8-chevron-50-next.png');
+}
+@media (max-width: 768px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
 .hero-fade {
   opacity: 0;
   transition: opacity 700ms ease-out;
