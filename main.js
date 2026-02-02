@@ -44,16 +44,23 @@ animatedElements.forEach(el => observer.observe(el));
 // Active nav highlighting
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
-const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        const link = document.querySelector(`.nav-link[href="#${id}"]`);
-        if (entry.isIntersecting) {
+const navObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+  
+            const id = entry.target.getAttribute('id');
+            const link = document.querySelector(`.nav-link[href="#${id}"]`);
+  
             navLinks.forEach(l => l.classList.remove('text-yellow-400'));
             if (link) link.classList.add('text-yellow-400');
-        }
-    });
-}, { threshold: 0.5 });
+        });
+    },
+    {
+        rootMargin: '-45% 0px -45% 0px',
+        threshold: 0
+    }
+);
 sections.forEach(section => navObserver.observe(section));
 
 // Current day highlighting
