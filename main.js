@@ -23,7 +23,6 @@ if (window.innerWidth <= 768) {
     });
 }
 
-
 // Scroll-triggered animations
 const animatedElements = document.querySelectorAll('[data-animate]');
 const observer = new IntersectionObserver(
