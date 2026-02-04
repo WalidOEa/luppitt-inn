@@ -30,6 +30,8 @@
         <link rel="preload" as="image" href="./assets/images/inn-outside-1.webp">
         <link rel="preload" as="image" href="./assets/images/inn-sign-1.webp">
         <link rel="preload" as="image" href="./assets/images/inn-outside-2.webp">
+
+        <title>The Luppitt Inn</title>
     </head>
     <body>
         <!-- Header -->
@@ -47,7 +49,7 @@
         </header>
 
         <!-- Home -->
-        <section id="home" class="hero-1">
+        <section id="home" class="landing-hero">
             <!-- First swiper -->
             <div class="swiper hero-fade"
             data-animate="hero-fade">
@@ -55,7 +57,7 @@
                 <!-- Slides -->
                     <div class="swiper-slide">
                         <img src="./assets/images/inn-outside-1.webp" alt="Luppitt Inn outside."/>
-                        <div class="caption">Nestled in the heart of Luppitt village. Photograph by Tom Wren.</div>
+                        <div class="caption">Nestled at the heart of Luppitt village. Photograph by Tom Wren.</div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/inn-interior-3.webp" loading="lazy" alt="Luppitt Inn interior with bar and cat sat on stool next to bar."/>
@@ -78,20 +80,20 @@
                 <div class="swiper-button-next"></div>
             </div>
 
-            <!-- Glass box -->
-            <div class="glass-wrapper slide-in-left"
-            data-animate="slide-in-left">
-                <div class="glass-box">
+            <!-- Box -->
+            <div class="box-wrapper hero-fade"
+            data-animate="hero-fade">
+                <div class="box">
                     <div class="glass-content">
                         <h2 class="h2-glass-box">Welcome</h2>
                         <p>Nestled in the heart of the East Devon village of Luppitt, approximately 5 miles from the market town of Honiton.
                         We are a traditional farmhouse drinking pub, serving the local community for several generations.
-                        Deeply routed in history and rural life, we offer a place to gather, relax, and enjoy a warm friendly atmosphere, alongside
+                        Deeply rooted in history and rural life, we offer a place to gather, relax, and enjoy a warm friendly atmosphere, alongside
                         local brewed beer (other drinks available).
                         </p>
                     </div>
                 </div>
-            </div> 
+            </div>
         </section>
 
         <div class="section-divider"></div>
@@ -144,10 +146,10 @@
         <div class="section-divider"></div>
 
         <!-- About -->
-        <section id="about" class="hero-1">
+        <section id="about" class="landing-hero">
             <!-- Second swiper -->
-            <div class="swiper slide-in-right"
-            data-animate="slide-in-right">
+            <div class="swiper slide-in-left"
+            data-animate="slide-in-left">
                 <div class="swiper-wrapper">
                 <!-- Slides -->
                     <div class="swiper-slide">
@@ -176,9 +178,9 @@
                 <div class="swiper-button-next"></div>
             </div>
 
-            <div class="glass-wrapper slide-in-left"
-            data-animate="slide-in-left">
-                <div class="glass-box">
+            <div class="box-wrapper slide-in-right"
+            data-animate="slide-in-right">
+                <div class="box">
                     <div class="glass-content">
                         <h2 class="h2-glass-box">About Us</h2>
                         <p>Mary Wright was the previous landlady, until 2020, when she was 98. Now her granddaughter and husband have taken on the reins
@@ -246,7 +248,7 @@
         <div class="section-divider"></div>
 
         <!-- Find Us -->
-        <section id="whats-on" class="hero-1">
+        <section id="whats-on" class="hero">
             <!-- Background image -->
             <div class="slide-in-right img_container"
             data-animate="slide-in-right">
@@ -259,7 +261,7 @@
                 <div class="glass-box">
                     <div class="glass-content">
                         <h2 class="h2-glass-box">What's On</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        <p>For details of upcoming events, please keep an eye out for our Facebook page for the latests updates.
                         </p>
                         <div class="flex flex-col items-center gap-6">
                             <!-- Facebook Feed -->
@@ -299,5 +301,7 @@
 
         <!-- Script -->
         <script src="main.js" defer></script>
+
+        <!-- If you're reading this, you should check out my github repos: https://github.com/WalidOEa -->
     </body>
 </html>
